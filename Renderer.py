@@ -12,7 +12,7 @@ import Vectors as vec
 
 class Screen:
 
-    """A screen with attributes width (x-axis), height (z-axis), camera (vector), light(s) (vector(s)) and none or
+    """A screen with attributes width (x-axis), height (z-axis), camera (vector), light(s) (vector(s)) and no or
        more objects"""
 
     def __init__(self, width, height):

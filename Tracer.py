@@ -1,6 +1,7 @@
 """The Tracer issues the ray tracing"""
 
 import Objects as obj  # including Vectors
+import Vectors
 import Vectors as vec
 
 
@@ -15,7 +16,8 @@ def ray_trace(objects, maximum_light_bounces, lights, pixel, camera, bg_color):
 
 def _trace(objects, maximum_light_bounces, light, pixel, camera, bg_col):
     """ray_trace help function; returns the pixel color generated from one light source 'light'"""
-    c_p = bg_col
+    c_p = vec.Vector(0, 0, 0)
+
     start_pixel = pixel
     start_camera = camera
 
@@ -42,8 +44,12 @@ def _trace(objects, maximum_light_bounces, light, pixel, camera, bg_col):
                     point = temporary_point
                     current_object = object
         if current_object is None:
-            return c_p
+            if i == 0:
+                return bg_col
+            else:
+                return c_p
         else:
+
             view_vector = vec.sub_vectors(camera, point)
 
             shadowed = obj.is_object_shadowed(current_object, point, objects, light)
@@ -90,6 +96,7 @@ def _trace(objects, maximum_light_bounces, light, pixel, camera, bg_col):
             scaler = scaler * current_object.reflection
             start_camera = point
             start_pixel = vec.add_vectors(point, reflected)
+
     return c_p
 
 

@@ -1,4 +1,4 @@
-"""The Renderer renders an image from a scene consisting of light sources and objects using
+"""The Renderer renders an image from a scene consisting of a light source and objects using
    ray tracing. The graphic module PIL is used to display the rendered image.
    The color model used to display the image is RGB, however, in the usage of the rendering
    module one has to use the scale RGB/255 (see example code in main_scene) .
@@ -12,7 +12,7 @@ import Vectors as vec
 
 class Screen:
 
-    """A screen with attributes width (x-axis), height (z-axis), camera (vector), light(s) (vector(s)) and no or
+    """A screen with attributes width (x-axis), height (z-axis), camera (vector), light(s) (vector(s)) and none or
        more objects"""
 
     def __init__(self, width, height):
@@ -74,7 +74,7 @@ class Screen:
         """Render and display screen"""
         for pixelrow in self.__pixels:
             for pixel in pixelrow:
-                color = Tracer.ray_trace(self.objects, 3, self.lights, pixel, self.camera, self.bg_color)
+                color = Tracer.ray_trace(self.objects, 5, self.lights, pixel, self.camera, self.bg_color)
 
                 if color.x < 0:
                     red = 0

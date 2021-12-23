@@ -93,8 +93,8 @@ class Cube:
         py = point.y
         for interval in self.pattern:
             if interval[0] <= px <= interval[1] and interval[2] <= py <= interval[3]:
-                self.ambient = vec.Vector(0, 0.2, .4)
-                self.diffuse = vec.Vector(0, 0.2, 0.4)
+                self.ambient = vec.Vector(0, 0.4, 0.2)
+                self.diffuse = vec.Vector(0, 0.4, 0.2)
                 return
             else:
                 continue
@@ -115,7 +115,7 @@ class Triangle:
         self.diffuse = vec.Vector(0.7, 0, 0)  # default
         self.specular = vec.Vector(1, 1, 1)  # default
         self.shininess = 100  # default
-        self.reflection = 0.5  # default
+        self.reflection = 0.1  # default
         self.normal = None
 
     def get_normal_vector(self, point):  # point a is closest to screen

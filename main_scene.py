@@ -17,8 +17,8 @@ if __name__=="__main__":
 
     #set background color
     #screen.bg_color = Vectors.Vector(17/255,29/255,29/255)
-    #screen.bg_color = Vectors.Vector(102/255,178/255,255/255)
-    screen.bg_color = Vectors.Vector(0,0.2,1)
+    screen.bg_color = Vectors.Vector(102/255,178/255,255/255)
+    #screen.bg_color = Vectors.Vector(0,0.2,1)
 
 
     # FLOOR CUBE
@@ -36,7 +36,7 @@ if __name__=="__main__":
     cube1.reflection = 0.07
     screen.generate_object(cube1)
 
-    cube2 = obj.Cube(5, [-7, 3, 1])
+    cube2 = obj.Cube(5, [-7, 3, 1.60])
     cube2.ambient = Vectors.Vector(1, 0.05, 0.1)
     cube2.diffuse = Vectors.Vector(0.7, 0.1, 0.1)
     cube2.reflection = 0.75
@@ -46,9 +46,10 @@ if __name__=="__main__":
     # SPHERES
 
     sphere1 = obj.Sphere(0.85, [-0.65, 1.55, 0.1])
-    sphere1.ambient = Vectors.Vector(0.05, 0.05, 0.05)
-    sphere1.diffuse = Vectors.Vector(0.85, 0.85, 0.85)
-    sphere1.reflection = 0.86
+    sphere1.ambient = Vectors.Vector(0., 0., 0.)
+    sphere1.diffuse = Vectors.Vector(0.7, 0.7, 0.7)
+    #sphere1.specular = Vectors.Vector(0.1, 0.1, 0.1)
+    sphere1.reflection = 1
 
     sphere2 = obj.Sphere(0.2, [-1, 0.25, -0.2])
     sphere2.ambient = Vectors.Vector(0.2, 0.1, 0)

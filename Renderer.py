@@ -1,4 +1,4 @@
-"""The Renderer renders an image from a scene consisting of a light source and objects using
+"""The Renderer renders an image from a scene consisting of light sources and objects using
    ray tracing. The graphic module PIL is used to display the rendered image.
    The color model used to display the image is RGB, however, in the usage of the rendering
    module one has to use the scale RGB/255 (see example code in main_scene) .

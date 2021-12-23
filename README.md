@@ -2,6 +2,6 @@
 
 ## A simple ray tracing renderer written in Python
 
-### Example of produced image
+### Produced image (example)
 
 ![](https://github.com/hgostrng/Ray_tracing_project/blob/main/example2.png)

@@ -17,7 +17,7 @@ if __name__=="__main__":
 
     #set background color
     #screen.bg_color = Vectors.Vector(17/255,29/255,29/255)
-    screen.bg_color = Vectors.Vector(102/255,178/255,255/255)
+    #screen.bg_color = Vectors.Vector(102/255,178/255,255/255)
     screen.bg_color = Vectors.Vector(0,0.2,1)
 
 
